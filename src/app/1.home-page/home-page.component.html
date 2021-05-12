@@ -1,0 +1,142 @@
+<div class="container">
+  <div class="row mb-2 mt-2 text-center">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <h2 style="color: greenyellow;"><i class="fab fa-bimobject"></i> SmartBear </h2>
+      <small style="color: rgb(104, 50, 255);" *ngIf="titleAction$ | async as title">{{ title }}</small>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+
+  <!-- nav bar -->
+  <nav class="navbar navbar-expand-md breadcrumb bg-ligh">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="nav nav-pills">
+        <a class="nav-item nav-link ml-1" (click)="changeTitle('Home')" data-toggle="tab" href="#home">
+          <i class="fa fa-home"></i>
+          Home
+        </a>
+        <a class="nav-item nav-link ml-1" (click)="changeTitle('Rentals')" data-toggle="tab" routerLink="/rentals">
+          <i class="fa fa-campground"></i>
+          Rentals
+        </a>
+        <a class="nav-item nav-link ml-3" (click)="changeTitle('Terms & Conditions')" data-toggle="tab" href="#terms">
+          <i class="fa fa-diagnoses"></i>
+          Terms & Conditions
+        </a>
+        <a class="nav-item nav-link move-right mr-3" (click)="changeTitle('Profile')" data-toggle="tab"
+          routerLink="/profile">
+          Welcome, {{ user?.firstName }}
+          <i class="fa fa-user"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <div class="mytextOne" style="color: rgb(29, 113, 238);">
+      <h2 tabindex="-1" class="live">
+        <span class="liveOne"
+          style="--tl-font-size:32px --tl-font-weight: 700; --tl-line-height: 36px; font-family: Arial, Helvetica, sans-serif;">Live
+          were
+          you&nbsp;like!</span>
+      </h2>
+    </div>
+  </section>
+  <hr>
+  <div class="container">
+    <div class="tab-content" id="homePage">
+      <div class="tab-pane fade show active" id="home">
+        <div class="container">
+          <div class="row mx-auto">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/id/193/3000/3000" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color: greenyellow;">
+                  <p class="card-text" style="font-style: italic; color: rgb(29, 113, 238);">Whole house</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/id/206/3000/3000" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color: greenyellow;">
+                  <p class="card-text" style="font-style: italic; color: rgb(29, 113, 238);">Country cottage / Villa</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/id/1078/3000/3000" class="card-img-top" alt="...">
+                <div class="card-body" style="background-color: greenyellow;">
+                  <p class="card-text" style="font-style: italic; color: rgb(29, 113, 238);">City Studio / Appartments
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- terms -->
+      <div class="tab-pane fade" id="terms">
+        <div class="row text-center">
+          <div class="container">
+            <h2>Terms & Conditions</h2>
+            <small>SmartBear Rental</small>
+            <div>
+              <h4>Terms of Service for European Users</h4>
+              <p class="info" style="text-align: left;">
+                As a consumer you can access the European Commission’s online dispute resolution platform here:
+                https://ec.europa.eu/consumers/odr. Please note that SmartBearRental is not committed nor obliged to use an
+                alternative dispute resolution entity to resolve disputes with consumers.
+
+                Thank you for using SmartBearRental!
+
+                These Terms of Service for European Users <strong>(“Terms”)</strong> are a binding legal agreement between you and SmartBearRental
+                that govern your use of the websites, applications, and other offerings from SmartBearRental (collectively, the
+                <strong>“SmartBearRental Platform”</strong>). When used in these Terms, “<strong>SmartBearRental</strong>,” “<strong>we</strong>,” “<strong>us</strong>,” or “<strong>our</strong>” refers to the SmartBearRental entity
+                set out on Schedule 0 with whom you are contracting.
+
+                The SmartBearRental Platform offers an online venue that enables users (<strong>“Members”</strong>) to publish, offer, search for,
+                and book services. Members who publish and offer services are <strong>“Hosts”</strong> and Members who search for, book,
+                or use services are “<strong>Guests</strong>.” Hosts offer accommodations (“<strong>Accommodations</strong>”), activities, excursions and
+                events (“<strong>Experiences</strong>”), and a variety of travel and other services (collectively, “<strong>Host Services</strong>,” and
+                each Host Service offering, a “<strong>Listing</strong>”). You must register an account to access and use many features
+                of the SmartBearRental Platform, and must keep your account information accurate. As the provider of the SmartBearRental
+                Platform, SmartBearRental does not own, control, offer or manage any Listings or Host Services. SmartBearRental is not a
+                party to the contracts concluded directly between Hosts and Guests, nor is SmartBearRental a real estate broker,
+                insurer or an organiser or retailer of travel packages under Directive (EU). SmartBearRental is not
+                acting as an agent in any capacity for any Member, except as specified in the Payments Terms of Service
+                (“<strong>Payment Terms</strong>”). To learn more about SmartBearRental’s role see Section 1.
+
+                We maintain other terms and policies that supplement these Terms like our Privacy Policy, which
+                describes our collection and use of personal data, and our Payments Terms, which govern any payment
+                services provided to Members by the SmartBearRental payment entities ("<strong>SmartBearRental Payments</strong>").
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<footer class="bd-footer p-3 p-md-5 text-center" style="background-color: greenyellow;">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li class="d-inline-block mr-5">
+        <a href="#aboutUs">About Us</a>
+      </li>
+      <li class="d-inline-block mr-5">
+        <a href="#contactUs">Contact Us</a>
+      </li>
+    </ul>
+    <div class="row justify-content-center">
+      <h3 style="color: darkblue;">Let us take care of you!</h3>
+    </div>
+  </div>
+</footer>

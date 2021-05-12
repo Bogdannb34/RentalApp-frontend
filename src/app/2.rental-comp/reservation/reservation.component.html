@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="tab-pane fade show active" id="reservations">
+    <div class="row mb-2 mt-2 text-center">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <h1 style="color: greenyellow;"><i class="fab fa-bimobject"></i> SmartBear </h1>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <div class="nav nav-pills">
+      <a class="nav-item nav-link ml-1" data-toggle="tab" routerLink="/home">
+        <i class="fa fa-home"></i>
+        Home
+      </a>
+      <a class="nav-item nav-link ml-1" data-toggle="tab" routerLink="/rentals">
+        <i class="fa fa-campground"></i>
+        Rentals
+      </a>
+    </div>
+  </div>
+</div>
+<hr style="height:20px">
+<div class="container">
+  <h6 style="color: red;">*Check-in starting from 13:00 PM  /  Check-out till 11:00 AM</h6>
+  <div class="row">
+    <form class="form-inline" action="reservation">
+      <label for="checkIn" class="mr-sm-2">Check-In</label>
+      <input type="datetime-local" id="checkIn" name="checkIn" class="form-control mb-2 mr-sm-2">
+      <label for="checkOut" class="mr-sm-2">Check-Out</label>
+      <input type="datetime-local" id="checkOut" name="checkOut" class="form-control mb-2 mr-sm-2">
+      <label for="guests" class="mr-sm-2">Guests</label>
+      <input type="number" id="guests" name="guests" class="form-control mb-2 mr-sm-2" style="width: 6%;">
+      <label for="totalCost" class="mr-sm-2">Total cost : 333.21 $ </label>
+      <input type="submit" class="btn btn-info" value="Book Now">
+    </form>
+  </div>
+</div>
+<hr>
+<div class="container-fluid">
+  <h4 class="text-center">Rental info</h4>
+  <table class="table table-active">
+    <thead class="table-borderless thead-light">
+      <tr class="text-center">
+        <th>Photo</th>
+        <th>Type</th>
+        <th>Name </th>
+        <th>Location</th>
+        <th>Guests</th>
+        <th>Price per night</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center">
+        <td>
+          <img height="100" width="100" src="{{ reservationDetails?.mainImage }}" class="rounded img-fluid" alt="">
+        </td>
+        <td>{{ reservationDetails?.type }}</td>
+        <td>{{ reservationDetails?.name }}</td>
+        <td>{{ reservationDetails?.location.city }} / {{ reservationDetails?.location.country }}</td>
+        <td>{{ reservationDetails?.maxPeople }}</td>
+        <td>{{ reservationDetails?.priceOvernight }} $ </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<footer class="bd-footer p-3 p-md-5 text-center " style="background-color: greenyellow;">
+  <div class="container">
+    <ul class="bd-footer-links">
+      <li class="d-inline-block mr-5">
+        <a href="#aboutUs">About Us</a>
+      </li>
+      <li class="d-inline-block mr-5">
+        <a href="#contactUs">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</footer>
