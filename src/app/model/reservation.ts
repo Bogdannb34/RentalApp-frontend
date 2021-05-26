@@ -1,3 +1,5 @@
+import { Rental } from "./rental";
+
 export class Reservation {
 
     public id: number;
@@ -5,6 +7,7 @@ export class Reservation {
     public checkOutDate: Date;
     public guests: number;
     public totalCost: number;
+    public rentalList: Set<Rental>;
 
     constructor() {
         this.checkInDate = null;

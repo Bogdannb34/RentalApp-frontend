@@ -6,6 +6,7 @@
                 </div>
                 <div class="col-md-4">
                     <h1 style="color: greenyellow;"><i class="fab fa-bimobject"></i> SmartBear </h1>
+                    <h3 style="color: #1d71ee;">Rentals</h3>
                 </div>
                 <div class="col-md-4">
                 </div>
@@ -392,16 +393,29 @@
 </div>
 <footer class="bd-footer p-3 p-md-5 text-center" style="background-color: greenyellow;">
     <div class="container">
-        <ul class="bd-footer-links">
-            <li class="d-inline-block mr-5">
-                <a href="#aboutUs">About Us</a>
-            </li>
-            <li class="d-inline-block mr-5">
-                <a href="#contactUs">Contact Us</a>
-            </li>
-        </ul>
+      <ul class="bd-footer-links">
+        <li class="d-inline-block mr-5">
+          <button type="button" class="btn btn-lg btn-info" data-toggle="collapse" data-target="#aboutus">About Us</button>
+          <div id="aboutus" class="collapse">
+            <br>
+            <h5>And here's some amazing content.</h5>
+            <h5>SDAcademy Final Project!</h5>
+          </div>
+        </li>
+        <li class="d-inline-block mr-5">
+          <button type="button" class="btn btn-lg btn-info" data-toggle="collapse" data-target="#contactus">Contact Us</button>
+          <div id="contactus" class="collapse">
+            <br>
+            <h5>And here's some amazing content.</h5>
+            <h5>Future Java Junior Software developer.</h5>
+          </div>
+        </li>
+      </ul>
+      <div class="row justify-content-center">
+        <h3 style="color: #1d71ee;">Let us take care of you!</h3>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
 <!-- (change)="onProfileImageChange($event.target.files[0].name, $event.target.files[0]); onUpdateProfileImage()" -->
